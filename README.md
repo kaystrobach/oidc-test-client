@@ -37,7 +37,7 @@ This service is intended to run in a docker container
 
 ```
 # beryju.org is a vanity URL for ghcr.io/beryju
-docker pull ghcr.io/beryju/oidc-test-client:
+docker pull ghcr.io/beryju/oidc-test-client:latest
 docker run -d --rm \
     -p 9009:9009 \
     -e OIDC_CLIENT_ID=test-id \
@@ -53,7 +53,7 @@ version: '3.5'
 
 services:
   oidc-test-client:
-    image: ghcr.io/beryju/oidc-test-client:
+    image: ghcr.io/beryju/oidc-test-client:latest
     ports:
       - 9009:9009
     environment:
